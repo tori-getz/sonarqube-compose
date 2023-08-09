@@ -7,6 +7,10 @@ services:
       - ./sonarqube/extensions:/opt/sonarqube/extensions
       - ./sonarqube/logs:/opt/sonarqube/logs
       - ./sonarqube/data:/opt/sonarqube/data
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
+      SONAR_JDBC_USERNAME: ${POSTGRES_USER}
+      SONAR_JDBC_PASSWORD: ${POSTGRES_PASSWORD}
     expose:
       - '9000'
     ports:
