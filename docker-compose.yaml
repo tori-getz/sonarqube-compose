@@ -4,6 +4,7 @@ services:
   sonarqube:
     image: 'sonarqube:9.9.1-community'
     volumes:
+      - ./sonarqube/conf:/opt/sonarqube/conf
       - ./sonarqube/extensions:/opt/sonarqube/extensions
       - ./sonarqube/logs:/opt/sonarqube/logs
       - ./sonarqube/data:/opt/sonarqube/data
