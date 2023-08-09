@@ -1,2 +1,3 @@
 sonarqube/
 .DS_Store
+.env
