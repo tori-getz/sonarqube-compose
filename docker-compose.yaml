@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   sonarqube:
-    image: 'sonarqube:9.9.1-community'
+    image: mc1arke/sonarqube-with-community-branch-plugin:9.9-community
     volumes:
       - ./sonarqube/conf:/opt/sonarqube/conf
       - ./sonarqube/extensions:/opt/sonarqube/extensions
